@@ -1,14 +1,16 @@
 import { extendTheme } from "@chakra-ui/react";
 import { styles } from "./styles";
 
+import Card from "./components/card";
+
 const overrides = {
   config: {
     initialColorMode: "light",
     useSystemColorMode: true,
   },
   colors: {},
+  components: { Card },
   styles,
-  components: {},
   breakpoints: {
     sm: "320px",
     md: "768px",

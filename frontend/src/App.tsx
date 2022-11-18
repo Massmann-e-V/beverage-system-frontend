@@ -2,8 +2,7 @@ import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "features/navbar";
 
-import { Home } from "./pages";
-import { Orders } from "./pages";
+import { Home, Orders, Profile } from "./pages";
 const App: React.FC = () => {
   return (
     <>
@@ -12,6 +11,7 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/profile" element={<Profile />} />
         </Routes>
       </BrowserRouter>
     </>

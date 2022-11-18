@@ -17,7 +17,7 @@ import {
 import { Link } from "react-router-dom";
 import * as React from "react";
 import { FiHelpCircle, FiSearch, FiSettings } from "react-icons/fi";
-import { Sidebar, ToggleButton } from "./components";
+import { Sidebar, ToggleButton, ColorModeSwitcher } from "./components";
 
 export const Navbar = () => {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
@@ -49,16 +49,11 @@ export const Navbar = () => {
                   icon={<FiSearch fontSize="1.25rem" />}
                   aria-label="Search"
                 />
-                <IconButton
-                  icon={<FiSettings fontSize="1.25rem" />}
-                  aria-label="Settings"
-                />
-                <IconButton
-                  icon={<FiHelpCircle fontSize="1.25rem" />}
-                  aria-label="Help Center"
-                />
+                <ColorModeSwitcher />
               </ButtonGroup>
-              <Avatar boxSize="10" name="K T" />
+              <Link to="/profile">
+                <Avatar boxSize="10" name="K T" />
+              </Link>
             </HStack>
           ) : (
             <>
